@@ -1,0 +1,60 @@
+@import 'mixins/clearfix';
+@import 'mixins/vw-conversion';
+@import 'mixins/font';
+
+@mixin flex-center($align: center) {
+    display:flex;
+    justify-content:center;
+    align-items:$align;
+}
+
+@mixin flex-between($align: center) {
+    display:flex;
+    justify-content:space-between;
+    align-items:$align;
+}
+
+@mixin pos_left(){
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+@mixin pos_right(){
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+}
+
+
+@mixin pos_center($position: absolute) {
+    position:$position;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+$browser-context-pc: 16;
+$browser-context-mo: 12;
+@mixin em-font-size-pc($pixels, $context: $browser-context-pc){
+    font-size:($pixels / $context) * 1em;
+}
+@mixin em-font-size-mo($pixels, $context: $browser-context-mo){
+    font-size:($pixels / $context) * 1em;
+}

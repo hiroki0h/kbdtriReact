@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+.sub {
+    background: yellowgreen;
+    &_page {
+        @include vw-convert-pc(padding-bottom, 150);
+    }
+    &-top {
+        width: 100%;
+        height: 200px;
+        //background: url(/public/img/sub/subTop.jpg)no-repeat center / cover;
+        background: red;
+        position: relative;
+    }
+    &-container {
+        max-width: 1920px;
+        padding: 0 40px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+    }
+    &-nav {
+        width: 100%;
+        @include vw-convert-pc(max-width, 227);
+        margin-right: 3%;
+        position: relative;
+        @include vw-convert-pc(top, -62);
+        &-title {
+            width: 100%;
+            @include vw-convert-pc(padding, 45 0 40);
+            margin: 0;
+            color: $white;
+            font-weight: 400;
+            text-align: center;
+            @include em-font-size-pc(27);
+            background: $mainBlue url(../images/menu_bg.png);
+        }
+        ul {}
+        li {
+            a {
+                @include vw-convert-pc(padding, 17 15);
+                @include em-font-size-pc(17);
+                color: #333;
+                font-weight: 500;
+                border-bottom: 1px solid $border;
+                display: block;
+            }
+            &:hover a {color: $pointYellow;}
+        }
+        .active {
+            a {
+                background: #f8f8f8;
+                color: $mainBlue;
+                border-bottom: 1px solid $mainBlue;
+            }
+        }
+    }
+    &-content {
+        width: 100%;
+        @include vw-convert-pc(padding, 50 0 20);
+        &-title {
+            @include vw-convert-pc(margin-bottom, 20);
+            position: relative;
+            align-items: baseline;
+            justify-content: space-between;
+            display: flex;
+            h1 {
+                @include em-font-size-pc(32);
+                font-weight: 700;
+            }
+            .breadcrumb {
+                display: flex;
+                li {
+                    @include vw-convert-pc(margin-bottom, 15);
+                    font-size: 13px;
+                    color: #222;
+                    &::after {
+                        content: "/\00a0";
+                        padding: 0 8px;
+                        font-size: 10px;
+                        color: #ccc;
+                    }
+                    &:last-child {
+                        &::after {content: none;}
+                    }
+                }
+            }
+        }
+        &-page {
+            .location {
+                &-info {}
+                &-box {
+                    width: 100%;
+                    height: 50px;
+                    background: pink;
+                }
+            }
+            &.history {
+                .history-logo {
+                    @include vw-convert-pc(margin-bottom, 24);
+                    text-align: center;
+                    font-weight: 700;
+                    @include em-font-size-pc(35);
+                }
+                .top-dot {
+                    width: 19px;
+                    height: 19px;
+                    @include vw-convert-pc(margin, 0 auto 58);
+                    border: 3px solid $border;
+                    background: $white;
+                    border-radius: 100%;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        width: 9px;
+                        height: 9px;
+                        background: $mainBlue;
+                        border-radius: 100%;
+                        box-sizing: content-box;
+                        border: 2px solid $white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        display: block;
+                    }
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 74px;
+                        background: $border;
+                        z-index: -1;
+                    }
+                }
+                .history-list {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        background: $border;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        display: block;
+                    }
+                    li {
+                        @include vw-convert-pc(padding, 32);
+                        dl {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: start;
+                            -ms-flex-align: start;
+                            align-items: flex-start;
+                            font-size: 1.125em;
+                        }
+                        dt {
+                            position: relative;
+                            white-space: nowrap;
+                            padding: 0 10px;
+                            font-weight: 500;
+                            &::before {
+                                content: "·";
+                                display: block;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                color: rgba(39, 85, 75, 0.39);
+                            }
+                        }
+                        dd {
+                            text-align: left;
+                            word-break: normal;
+                        }
+                        .year {
+                            display: inline-block;
+                            @include vw-convert-pc(padding, 5 14);
+                            @include vw-convert-pc(margin-bottom, 18);
+                            @include em-font-size-pc(25);
+                            color: $white;
+                            font-weight: 700;
+                            background: $mainBlue;
+                            display: inline-block;
+                        }
+                        &:nth-child(odd) {
+                            @include vw-convert-pc(padding-right, 40);
+                            margin-right: 50%;
+                            text-align: right;
+                            dl {
+                                -webkit-box-orient: horizontal;
+                                -webkit-box-direction: reverse;
+                                -ms-flex-direction: row-reverse;
+                                flex-direction: row-reverse;
+                            }
+                            dt {
+                                &::before {
+                                    left: inherit;
+                                    right: 0;
+                                }
+                            }
+                            dd {text-align: right;}
+                        }
+                        &:nth-child(even) {
+                            @include vw-convert-pc(padding-left, 40);
+                            margin-left: 50%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

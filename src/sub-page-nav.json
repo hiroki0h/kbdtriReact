@@ -1,0 +1,36 @@
+{
+    "list": [
+        {
+            "link": "/certification/introduce-certification",
+            "title": "인증센터",
+            "list2": [
+                {
+                    "link": "/certification/introduce-certification",
+                    "title": "인증 · 평가 소개"
+                },
+                {
+                    "link": "/certification/dismantling-report",
+                    "title": "해체 계획서 작성 & 인증"
+                }
+            ]
+        },
+        {
+            "link": "/information-service/notice",
+            "title": "정보 서비스",
+            "list2": [
+                {
+                    "link": "/information-service/notice",
+                    "title": "공지사항"
+                },
+                {
+                    "link": "/information-service/online-contact",
+                    "title": "온라인 문의"
+                },
+                {
+                    "link": "/information-service/kbdt-news",
+                    "title": "KBDT 소식"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+  "boards": [
+    {
+      "id": "1",
+      "name": "kbdt_news",
+      "title": "한국건축물 해체기술 연구원 출범",
+      "date": "2022-02-02",
+      "da1te": "20220202",
+      "file": "",
+      "content": "<p>대담함과 우아함을 담은 한정판 NEW 타이거 에디션 <br>한 번의 발색으로도 선명하고 풍부하게 표현되는 컬러</p><img src=\"https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220217_135%2F1645069438907Ank4t_JPEG%2F1-1.jpg%3Ftype%3Df342_342%22&amp;type=nf340_228\" alt=\"삐아 오토 젤 라이너\"/>"
+    },
+    {
+      "id": "2",
+      "name": "notice",
+      "title": "검색어를 입력하세요.",
+      "date": "2022-02-03",
+      "da1te": "20220203",
+      "file": "테스트01.hwp",
+      "content": "222222222222222222"
+    },
+    {
+      "id": "3",
+      "name": "dismantling_research",
+      "title": "table 컬럼 및 form 내부 id 및 name 명명법 정리",
+      "date": "2022-02-02",
+      "da1te": "20220202",
+      "file": "",
+      "content": "333333333333333"
+    },
+    {
+      "id": "4",
+      "name": "kbdt_news",
+      "title": "이메일 수신 동의여부",
+      "da1te": "20220201",
+      "date": "2022-02-01",
+      "file": "테스트02.hwp",
+      "content": "4444444444444"
+    },
+    {
+      "id": "5",
+      "name": "kbdt_news",
+      "title": "이메일 수신 333 동의여부",
+      "da1te": "20220201",
+      "date": "2022-02-01",
+      "file": "테스트02.hwp",
+      "content": "4444444444444"
+    }
+  ],
+  "users": [
+    {
+      "user_id": "test01",
+      "user_password": "test01test01",
+      "user_name": "테스트01",
+      "email": "test01@test01.com",
+      "mailing_check": true
+    },
+    {
+      "user_id": "test02",
+      "user_password": "test02test02",
+      "user_name": "테스트02",
+      "email": "test02@test02.com",
+      "mailing_check": false
+    },
+    {
+      "user_id": "test03",
+      "user_password": "test03test03",
+      "user_name": "테스트03",
+      "email": "test03@test03.com",
+      "mailing_check": false
+    }
+  ],
+  "file": [
+    {
+      "id": "1",
+      "name": "test01",
+      "date": "2022-02-02",
+      "fileName": "테스트01.hwp",
+      "statue": "접수 완료"
+    },
+    {
+      "id": "2",
+      "name": "test02",
+      "date": "2022-02-02",
+      "fileName": "테스트02.hwp",
+      "statue": "진행중"
+    },
+    {
+      "id": "3",
+      "name": "test03",
+      "date": "2022-02-02",
+      "fileName": "테스트03.hwp",
+      "statue": "반려"
+    },
+    {
+      "id": "4",
+      "name": "test04",
+      "date": "2022-02-02",
+      "fileName": "테스트04.hwp",
+      "statue": "완료"
+    }
+  ]
+}
